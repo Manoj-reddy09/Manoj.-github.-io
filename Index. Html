@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio | C Programming</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      color: #eef4ff;
+      background: #080d1c;
+      line-height: 1.7;
+    }
+    header {
+      padding: 58px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #101d42, #183d60, #241747);
+      border-bottom: 1px solid #34466f;
+    }
+    header h1 { font-size: clamp(2rem, 6vw, 3.4rem); margin-bottom: 8px; }
+    header p { color: #c5d6f5; }
+    nav {
+      position: sticky; top: 0; z-index: 5;
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 18px;
+      padding: 13px; background: #0d1428; border-bottom: 1px solid #263657;
+    }
+    nav a { color: #8edcff; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: white; }
+    main { width: min(920px, 92%); margin: 30px auto 60px; }
+    section {
+      background: #111b32; border: 1px solid #26395d;
+      border-radius: 14px; padding: 24px; margin: 20px 0;
+      box-shadow: 0 8px 25px #0004;
+    }
+    h2 { color: #7ddcff; margin-bottom: 12px; }
+    h3 { color: #b6d8ff; margin: 16px 0 6px; }
+    .detail { color: #c8d5ec; }
+    .tag {
+      display: inline-block; padding: 5px 12px; margin: 5px 5px 0 0;
+      border-radius: 20px; background: #1c3155; color: #a9e6ff;
+    }
+    pre {
+      overflow-x: auto; padding: 18px; margin: 12px 0;
+      border-radius: 10px; background: #070c18;
+      border: 1px solid #2a4168; color: #c8f2ff;
+      font-size: 14px;
+    }
+    ol { padding-left: 23px; }
+    li { margin: 7px 0; }
+    .note { color: #b9c9e3; }
+    footer { text-align: center; padding: 25px; color: #9aaccb; border-top: 1px solid #263657; }
+    @media (max-width: 600px) {
+      section { padding: 18px; }
+      nav { gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hello, I'm [Your Name]</h1>
+    <p>Student | Beginner C Programmer | Learning and Building</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#project">C Project</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p class="detail">Hello! I am [Your Name]. I am a student interested in programming and technology. This website introduces me and presents a simple C programming project.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p><strong>Course:</strong> [Your Course / Degree]</p>
+      <p><strong>College:</strong> [Your College Name]</p>
+      <p><strong>Year:</strong> [Your Current Year]</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <span class="tag">C Programming</span>
+      <span class="tag">HTML</span>
+      <span class="tag">Basic CSS</span>
+      <span class="tag">Problem Solving</span>
+      <p class="note" style="margin-top:12px;">Edit this list to show your own skills.</p>
+    </section>
+
+    <section id="achievements">
+      <h2>Achievements</h2>
+      <ul>
+        <li>[Add an achievement, certificate, or project here]</li>
+        <li>[Add another achievement here]</li>
+      </ul>
+    </section>
+
+    <section id="project">
+      <h2>My C Programming Project: Pyramid Pattern</h2>
+      <p>This beginner-level C program prints a pyramid using stars (*). It uses simple <strong>for loops</strong> and <strong>printf()</strong>.</p>
+
+      <h3>C Program</h3>
+      <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int i, j, rows;
+
+    printf("Enter number of rows: ");
+    scanf("%d", &amp;rows);
+
+    for (i = 1; i &lt;= rows; i++) {
+        for (j = 1; j &lt;= rows - i; j++) {
+            printf(" ");
+        }
+
+        for (j = 1; j &lt;= 2 * i - 1; j++) {
+            printf("*");
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}</code></pre>
+
+      <h3>Logic of the Program</h3>
+      <ol>
+        <li>Read the number of rows from the user.</li>
+        <li>The first loop controls the rows of the pyramid.</li>
+        <li>The second loop prints spaces before the stars.</li>
+        <li>The third loop prints stars in each row.</li>
+        <li>After printing each row, <code>printf("\n")</code> moves to the next line.</li>
+        <li>The program stops after all rows are printed.</li>
+      </ol>
+
+      <h3>Step-by-Step Example</h3>
+      <p>If the user enters <strong>5</strong>, the output is:</p>
+      <pre><code>    *
+   ***
+  *****
+ *******
+*********</code></pre>
+
+      <h3>Tools Used to Execute the Program</h3>
+      <ul>
+        <li><strong>OnlineGDB:</strong> Write and run C code in a web browser.</li>
+        <li><strong>Programiz Online C Compiler:</strong> Run the program without installing software.</li>
+        <li><strong>GCC:</strong> A C compiler that can be installed on a computer.</li>
+      </ul>
+      <p class="note">For a beginner, an online C compiler is an easy way to test this program.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by [Your Name] | Personal Portfolio & C Programming Project</p>
+  </footer>
+</body>
+</html>
